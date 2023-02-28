@@ -12,11 +12,62 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Classic template
+      - name: Fortune
         uses: lowlighter/metrics@latest
         with:
-          base: header, repositories
-          filename: metrics/classic.svg
+          filename: metrics/fortune.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_fortune: yes
+      - name: Full-year calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          plugin_lines: yes
-          
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+      - name: Gists
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/gists.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_gists: yes
+      - name: Indepth analysis follow-up
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/followup.indepth.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_followup: yes
+          plugin_followup_indepth: yes
+      - name: Indepth analysis languages
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/languages.indepth.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_languages: yes
+          plugin_languages_ignored: >-
+            html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell,
+            gnuplot
+          plugin_languages_indepth: yes
+          plugin_languages_details: lines, bytes-size
+          plugin_languages_limit: 4
+          plugin_languages_analysis_timeout: 15
+      - name: Recently starred
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/stars.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 3
+      - name: Repositories traffic
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/traffic.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: repositories
+          plugin_traffic: yes
