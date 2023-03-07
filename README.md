@@ -4,12 +4,12 @@
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=promecarus&theme=android-dark&border_radius=3.625&date_format=%5BY.%5Dn.j)](https://git.io/streak-stats)
 
-![./metrics/classic.svg](./metrics/classic.svg)
+<!-- ![./metrics/classic.svg](./metrics/classic.svg) -->
 ![./metrics/isocalendar.fullyear.svg](./metrics/isocalendar.fullyear.svg)
-![./metrics/followup.indepth.svg](./metrics/followup.indepth.svg)
-![./metrics/gists.svg](./metrics/gists.svg)
-![./metrics/languages.indepth.svg](./metrics/languages.indepth.svg)
-![./metrics/stars.svg](./metrics/stars.svg)
+<!-- ![./metrics/followup.indepth.svg](./metrics/followup.indepth.svg) -->
+<!-- ![./metrics/gists.svg](./metrics/gists.svg) -->
+<!-- ![./metrics/languages.indepth.svg](./metrics/languages.indepth.svg) -->
+<!-- ![./metrics/stars.svg](./metrics/stars.svg) -->
 ![./metrics/traffic.svg](./metrics/traffic.svg)
 ![./metrics/fortune.svg](./metrics/fortune.svg)
 
